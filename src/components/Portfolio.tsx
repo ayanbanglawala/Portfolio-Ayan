@@ -1,7 +1,13 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useCallback } from "react"
-import { motion, useScroll, useSpring, useMotionValue, AnimatePresence } from "framer-motion"
+import { useState, useEffect, useCallback } from "react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useMotionValue,
+  AnimatePresence,
+} from "framer-motion";
 import {
   Mail,
   Phone,
@@ -35,37 +41,37 @@ import {
   Server,
   Palette,
   Quote,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("hero")
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const [activeSection, setActiveSection] = useState("hero");
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  const { scrollYProgress } = useScroll()
+  const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 400,
     damping: 40,
     restDelta: 0.001,
-  })
+  });
 
   // Smooth mouse follower
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
-  const smoothMouseX = useSpring(mouseX, { stiffness: 200, damping: 20 })
-  const smoothMouseY = useSpring(mouseY, { stiffness: 200, damping: 20 })
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const smoothMouseX = useSpring(mouseX, { stiffness: 200, damping: 20 });
+  const smoothMouseY = useSpring(mouseY, { stiffness: 200, damping: 20 });
 
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
-      mouseX.set(e.clientX - 12)
-      mouseY.set(e.clientY - 12)
+      mouseX.set(e.clientX - 12);
+      mouseY.set(e.clientY - 12);
     },
-    [mouseX, mouseY],
-  )
+    [mouseX, mouseY]
+  );
 
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [handleMouseMove])
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [handleMouseMove]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,36 +86,39 @@ export default function Portfolio() {
         "testimonials",
         "blog",
         "contact",
-      ]
-      const scrollPosition = window.scrollY + 100
+      ];
+      const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
-        const element = document.getElementById(section)
+        const element = document.getElementById(section);
         if (element) {
-          const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
+          const { offsetTop, offsetHeight } = element;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
           }
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Auto-rotate testimonials
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
-  }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const skills = [
     { name: "JavaScript", level: 90, color: "progress-yellow" },
@@ -120,7 +129,7 @@ export default function Portfolio() {
     { name: "AI/ML", level: 65, color: "progress-purple" },
     { name: "C++", level: 80, color: "progress-red" },
     { name: "Firebase", level: 75, color: "progress-orange" },
-  ]
+  ];
 
   const projects = [
     {
@@ -130,7 +139,13 @@ export default function Portfolio() {
       longDescription:
         "This React Native application addresses the language barrier faced by Gujarati speakers learning English. It includes over 200 grammar lessons, voice recognition for pronunciation practice, gamified learning modules, and offline capability for uninterrupted learning.",
       tech: ["React Native", "Expo", "Firebase", "Audio API", "AsyncStorage"],
-      features: ["Interactive Lessons", "Audio Support", "Progress Tracking", "Offline Mode", "Gamification"],
+      features: [
+        "Interactive Lessons",
+        "Audio Support",
+        "Progress Tracking",
+        "Offline Mode",
+        "Gamification",
+      ],
       status: "Completed",
       color: "timeline-card-purple",
       icon: Smartphone,
@@ -141,7 +156,14 @@ export default function Portfolio() {
         "An intelligent AI assistant prototype that leverages OpenAI's GPT models and LangChain for task automation, information retrieval, and natural language interactions.",
       longDescription:
         "This project demonstrates advanced AI integration with features like context-aware conversations, task scheduling, email automation, web scraping, and multi-modal interactions including voice and text processing.",
-      tech: ["Python", "OpenAI API", "LangChain", "FastAPI", "WebSocket", "Speech Recognition"],
+      tech: [
+        "Python",
+        "OpenAI API",
+        "LangChain",
+        "FastAPI",
+        "WebSocket",
+        "Speech Recognition",
+      ],
       features: [
         "Voice Interaction",
         "Task Automation",
@@ -177,7 +199,14 @@ export default function Portfolio() {
         "An AI-powered tool that automatically generates personalized portfolio websites based on user input, with customizable themes and responsive design.",
       longDescription:
         "This innovative tool uses machine learning to analyze user skills and experience, then generates a fully functional portfolio website with optimized SEO, responsive design, and integration with popular platforms.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "OpenAI API", "Vercel", "Prisma"],
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "OpenAI API",
+        "Vercel",
+        "Prisma",
+      ],
       features: [
         "AI Content Generation",
         "Theme Customization",
@@ -189,7 +218,7 @@ export default function Portfolio() {
       color: "timeline-card-emerald",
       icon: Palette,
     },
-  ]
+  ];
 
   const testimonials = [
     {
@@ -219,7 +248,7 @@ export default function Portfolio() {
       rating: 5,
       avatar: "AK",
     },
-  ]
+  ];
 
   const blogPosts = [
     {
@@ -249,7 +278,7 @@ export default function Portfolio() {
       tags: ["DSA", "Programming", "Education"],
       color: "timeline-card-emerald",
     },
-  ]
+  ];
 
   const experience = [
     {
@@ -293,9 +322,9 @@ export default function Portfolio() {
       ],
       color: "timeline-card-emerald",
     },
-  ]
+  ];
 
-  const [activeTab, setActiveTab] = useState("technical")
+  const [activeTab, setActiveTab] = useState("technical");
 
   return (
     <div className="portfolio">
@@ -328,7 +357,9 @@ export default function Portfolio() {
             <li key={item.id}>
               <button
                 onClick={() => scrollToSection(item.id)}
-                className={`nav-item ${activeSection === item.id ? "active" : ""}`}
+                className={`nav-item ${
+                  activeSection === item.id ? "active" : ""
+                }`}
               >
                 <item.icon className="nav-icon" />
                 <span className="nav-label">{item.label}</span>
@@ -369,7 +400,10 @@ export default function Portfolio() {
               transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
             >
               <h2 className="hero-subtitle">
-                Passionate <span style={{ color: "#7c3aed", fontWeight: "600" }}>Full-Stack & Mobile Developer</span>
+                Passionate{" "}
+                <span style={{ color: "#7c3aed", fontWeight: "600" }}>
+                  Full-Stack & Mobile Developer
+                </span>
               </h2>
               <h3 className="hero-role">MERN Stack & React Native Developer</h3>
             </motion.div>
@@ -380,8 +414,9 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
             >
-              I specialize in building modern web and mobile applications using MERN stack and React Native. Exploring
-              AI and machine learning to expand my skill set and build intelligent solutions in the future.
+              I specialize in building modern web and mobile applications using
+              MERN stack and React Native. Exploring AI and machine learning to
+              expand my skill set and build intelligent solutions in the future.
             </motion.p>
 
             <motion.div
@@ -390,21 +425,26 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
             >
-              <button onClick={() => scrollToSection("projects")} className="btn btn-primary btn-lg">
+              <button
+                onClick={() => scrollToSection("projects")}
+                className="btn btn-primary btn-lg"
+              >
                 <Rocket className="btn-icon" />
                 Explore My Work
               </button>
-              <button onClick={() => scrollToSection("contact")} className="btn btn-outline btn-lg">
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="btn btn-outline btn-lg"
+              >
                 <Send className="btn-icon" />
                 Let's Connect
               </button>
               <a href="/ResumeAB.pdf" download>
-  <button className="btn btn-outline-emerald btn-lg">
-    <Download className="btn-icon" />
-    Download CV
-  </button>
-</a>
-
+                <button className="btn btn-outline-emerald btn-lg">
+                  <Download className="btn-icon" />
+                  Download CV
+                </button>
+              </a>
             </motion.div>
 
             {/* Stats */}
@@ -471,19 +511,24 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <h3 className="about-title">Who I Am</h3>
-                    <p className="about-subtitle">Passionate Developer & Learner</p>
+                    <p className="about-subtitle">
+                      Passionate Developer & Learner
+                    </p>
                   </div>
                 </div>
                 <div className="about-content">
                   <p className="about-text">
-                    I am a passionate MERN Stack and React Native Developer currently pursuing an Online MCA from Parul
-                    University. I love building modern web and mobile applications that are both functional and
-                    user-friendly.
+                    I am a passionate MERN Stack and React Native Developer
+                    currently pursuing an Online MCA from Parul University. I
+                    love building modern web and mobile applications that are
+                    both functional and user-friendly.
                   </p>
                   <p className="about-text">
-                    I believe in continuous learning and regularly explore areas like AI, machine learning, and
-                    full-stack architecture to deepen my expertise. My long-term goal is to contribute to intelligent,
-                    impactful solutions at the intersection of technology and real-world needs.
+                    I believe in continuous learning and regularly explore areas
+                    like AI, machine learning, and full-stack architecture to
+                    deepen my expertise. My long-term goal is to contribute to
+                    intelligent, impactful solutions at the intersection of
+                    technology and real-world needs.
                   </p>
                 </div>
               </div>
@@ -498,8 +543,9 @@ export default function Portfolio() {
                   </div>
                   <div className="mission-content">
                     <p>
-                      To build high-quality, user-centric web and mobile applications using modern technologies, while
-                      continuously learning and contributing to innovative solutions.
+                      To build high-quality, user-centric web and mobile
+                      applications using modern technologies, while continuously
+                      learning and contributing to innovative solutions.
                     </p>
                   </div>
                 </div>
@@ -513,8 +559,9 @@ export default function Portfolio() {
                   </div>
                   <div className="vision-content">
                     <p>
-                      To evolve into an expert full-stack developer and agentic AI engineer, creating intelligent,
-                      impactful systems that solve real-world problems and benefit society.
+                      To evolve into an expert full-stack developer and agentic
+                      AI engineer, creating intelligent, impactful systems that
+                      solve real-world problems and benefit society.
                     </p>
                   </div>
                 </div>
@@ -565,9 +612,11 @@ export default function Portfolio() {
                           stiffness: 300,
                           damping: 20,
                         }}
-                        
                       >
-                        <div className="drives-item-icon" style={{padding:"15px"}}>
+                        <div
+                          className="drives-item-icon"
+                          style={{ padding: "15px" }}
+                        >
                           <item.icon className="drives-item-icon-svg" />
                         </div>
                         <p className="drives-item-text">{item.text}</p>
@@ -595,7 +644,9 @@ export default function Portfolio() {
                       <div key={index} className="language-item">
                         <div className="language-header">
                           <span className="language-name">{item.lang}</span>
-                          <span className="badge badge-orange">{item.level}</span>
+                          <span className="badge badge-orange">
+                            {item.level}
+                          </span>
                         </div>
                         <div className="progress">
                           <div
@@ -623,7 +674,9 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="section-header"
           >
-            <h2 className="section-title experience-title">Experience Journey</h2>
+            <h2 className="section-title experience-title">
+              Experience Journey
+            </h2>
             <div className="section-divider experience-divider"></div>
           </motion.div>
 
@@ -642,7 +695,9 @@ export default function Portfolio() {
                   ease: "easeOut",
                 }}
                 viewport={{ once: true }}
-                className={`timeline-item ${index % 2 === 0 ? "" : "timeline-item-reverse"}`}
+                className={`timeline-item ${
+                  index % 2 === 0 ? "" : "timeline-item-reverse"
+                }`}
               >
                 <div className="timeline-content">
                   <div className={`card timeline-card ${exp.color}`}>
@@ -653,9 +708,16 @@ export default function Portfolio() {
                       </p>
                     </div>
                     <div className="timeline-card-content">
-                      <p className="timeline-card-description">{exp.description}</p>
+                      <p className="timeline-card-description">
+                        {exp.description}
+                      </p>
                       <div className="timeline-achievements">
-                        <h4 className="achievements-title" style={{ color: "white" }}>Key Achievements:</h4>
+                        <h4
+                          className="achievements-title"
+                          style={{ color: "white" }}
+                        >
+                          Key Achievements:
+                        </h4>
                         <ul className="achievements-list">
                           {exp.achievements.map((achievement, i) => (
                             <li key={i} className="achievement-item">
@@ -687,7 +749,9 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="section-header"
           >
-            <h2 className="section-title education-title">Education & Certifications</h2>
+            <h2 className="section-title education-title">
+              Education & Certifications
+            </h2>
             <div className="section-divider education-divider"></div>
           </motion.div>
 
@@ -707,7 +771,9 @@ export default function Portfolio() {
                 </div>
                 <div className="education-card-content">
                   <div className="education-item">
-                    <h3 className="education-degree">Master of Computer Applications (MCA)</h3>
+                    <h3 className="education-degree">
+                      Master of Computer Applications (MCA)
+                    </h3>
                     <div className="education-university">
                       <MapPin className="university-icon" />
                       <span className="university-name">Parul University</span>
@@ -795,7 +861,9 @@ export default function Portfolio() {
                     >
                       <div className="certification-header">
                         <h4 className="certification-title">{cert.title}</h4>
-                        <span className={`badge ${cert.badgeClass}`}>{cert.status}</span>
+                        <span className={`badge ${cert.badgeClass}`}>
+                          {cert.status}
+                        </span>
                       </div>
                       <p className="certification-provider">{cert.provider}</p>
                     </motion.div>
@@ -832,7 +900,9 @@ export default function Portfolio() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`tabs-trigger ${activeTab === tab.id ? "active" : ""}`}
+                  className={`tabs-trigger ${
+                    activeTab === tab.id ? "active" : ""
+                  }`}
                 >
                   {tab.label}
                 </button>
@@ -885,19 +955,40 @@ export default function Portfolio() {
                     {
                       category: "Development Tools",
                       icon: Code,
-                      tools: ["VS Code", "Android Studio", "Expo", "Git", "GitHub", "Postman"],
+                      tools: [
+                        "VS Code",
+                        "Android Studio",
+                        "Expo",
+                        "Git",
+                        "GitHub",
+                        "Postman",
+                      ],
                       color: "timeline-card-blue",
                     },
                     {
                       category: "Cloud & Database",
                       icon: Database,
-                      tools: ["Firebase", "MongoDB", "PostgreSQL", "AWS", "Vercel", "Netlify"],
+                      tools: [
+                        "Firebase",
+                        "MongoDB",
+                        "PostgreSQL",
+                        "AWS",
+                        "Vercel",
+                        "Netlify",
+                      ],
                       color: "timeline-card-emerald",
                     },
                     {
                       category: "Design & Productivity",
                       icon: Palette,
-                      tools: ["Figma", "Canva", "Notion", "Slack", "Trello", "Adobe XD"],
+                      tools: [
+                        "Figma",
+                        "Canva",
+                        "Notion",
+                        "Slack",
+                        "Trello",
+                        "Adobe XD",
+                      ],
                       color: "timeline-card-purple",
                     },
                   ].map((category, index) => (
@@ -991,7 +1082,9 @@ export default function Portfolio() {
                           viewport={{ once: true }}
                         />
                       </div>
-                      <span className="concept-percentage">{concept.progress}% Proficiency</span>
+                      <span className="concept-percentage">
+                        {concept.progress}% Proficiency
+                      </span>
                     </motion.div>
                   ))}
                 </div>
@@ -1041,7 +1134,9 @@ export default function Portfolio() {
                     >
                       <skill.icon className="soft-skill-icon" />
                       <h3 className="soft-skill-name">{skill.skill}</h3>
-                      <div className="soft-skill-percentage">{skill.level}%</div>
+                      <div className="soft-skill-percentage">
+                        {skill.level}%
+                      </div>
                       <div className="soft-skill-progress">
                         <motion.div
                           className="soft-skill-progress-bar"
@@ -1077,8 +1172,8 @@ export default function Portfolio() {
             <h2 className="section-title">Featured Projects</h2>
             <div className="section-divider"></div>
             <p className="section-description">
-              Explore my journey through innovative projects that showcase my skills in AI, mobile development, and
-              full-stack engineering.
+              Explore my journey through innovative projects that showcase my
+              skills in AI, mobile development, and full-stack engineering.
             </p>
           </motion.div>
 
@@ -1106,8 +1201,8 @@ export default function Portfolio() {
                         project.status === "Completed"
                           ? "badge-green"
                           : project.status === "In Development"
-                            ? "badge-yellow"
-                            : "badge-blue"
+                          ? "badge-yellow"
+                          : "badge-blue"
                       }`}
                     >
                       {project.status}
@@ -1119,8 +1214,12 @@ export default function Portfolio() {
 
                 <div className="project-card-content">
                   <div className="project-overview">
-                    <h4 className="project-overview-title">Detailed Overview:</h4>
-                    <p className="project-overview-text">{project.longDescription}</p>
+                    <h4 className="project-overview-title">
+                      Detailed Overview:
+                    </h4>
+                    <p className="project-overview-text">
+                      {project.longDescription}
+                    </p>
                   </div>
 
                   <div className="project-tech">
@@ -1173,7 +1272,9 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="section-header"
           >
-            <h2 className="section-title achievements-title">Achievements & Milestones</h2>
+            <h2 className="section-title achievements-title">
+              Achievements & Milestones
+            </h2>
             <div className="section-divider achievements-divider"></div>
           </motion.div>
 
@@ -1198,7 +1299,8 @@ export default function Portfolio() {
               {
                 icon: Code,
                 title: "Problem Solving Excellence",
-                description: "Solved 100+ Data Structures and Algorithms problems across multiple platforms",
+                description:
+                  "Solved 100+ Data Structures and Algorithms problems across multiple platforms",
                 metric: "100+ Problems",
                 color: "timeline-card-emerald",
               },
@@ -1221,7 +1323,8 @@ export default function Portfolio() {
               {
                 icon: Rocket,
                 title: "Innovation Recognition",
-                description: "Recognized for innovative approach to solving real-world problems through technology",
+                description:
+                  "Recognized for innovative approach to solving real-world problems through technology",
                 metric: "2 Awards",
                 color: "timeline-card-purple",
               },
@@ -1249,7 +1352,9 @@ export default function Portfolio() {
                   </motion.div>
                   <div className="achievement-metric">{achievement.metric}</div>
                   <h3 className="achievement-title">{achievement.title}</h3>
-                  <p className="achievement-description">{achievement.description}</p>
+                  <p className="achievement-description">
+                    {achievement.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -1267,7 +1372,9 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="section-header"
           >
-            <h2 className="section-title testimonials-title">What People Say</h2>
+            <h2 className="section-title testimonials-title">
+              What People Say
+            </h2>
             <div className="section-divider testimonials-divider"></div>
           </motion.div>
 
@@ -1283,18 +1390,27 @@ export default function Portfolio() {
               >
                 <div className="card card-gradient-purple testimonial-card">
                   <Quote className="testimonial-quote-icon" />
-                  <p className="testimonial-content">"{testimonials[currentTestimonial].content}"</p>
+                  <p className="testimonial-content">
+                    "{testimonials[currentTestimonial].content}"
+                  </p>
                   <div className="testimonial-rating">
-                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                      <Star key={i} className="testimonial-star" />
-                    ))}
+                    {[...Array(testimonials[currentTestimonial].rating)].map(
+                      (_, i) => (
+                        <Star key={i} className="testimonial-star" />
+                      )
+                    )}
                   </div>
                   <div className="testimonial-author">
-                    <div className="testimonial-avatar">{testimonials[currentTestimonial].avatar}</div>
+                    <div className="testimonial-avatar">
+                      {testimonials[currentTestimonial].avatar}
+                    </div>
                     <div className="testimonial-author-info">
-                      <h4 className="testimonial-author-name">{testimonials[currentTestimonial].name}</h4>
+                      <h4 className="testimonial-author-name">
+                        {testimonials[currentTestimonial].name}
+                      </h4>
                       <p className="testimonial-author-role">
-                        {testimonials[currentTestimonial].role} at {testimonials[currentTestimonial].company}
+                        {testimonials[currentTestimonial].role} at{" "}
+                        {testimonials[currentTestimonial].company}
                       </p>
                     </div>
                   </div>
@@ -1307,7 +1423,9 @@ export default function Portfolio() {
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`testimonial-indicator ${index === currentTestimonial ? "active" : ""}`}
+                  className={`testimonial-indicator ${
+                    index === currentTestimonial ? "active" : ""
+                  }`}
                 />
               ))}
             </div>
@@ -1328,7 +1446,8 @@ export default function Portfolio() {
             <h2 className="section-title blog-title">Latest Insights</h2>
             <div className="section-divider blog-divider"></div>
             <p className="section-description">
-              Sharing knowledge and insights about AI, development, and technology trends.
+              Sharing knowledge and insights about AI, development, and
+              technology trends.
             </p>
           </motion.div>
 
@@ -1386,11 +1505,15 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="section-header"
           >
-            <h2 className="section-title contact-title">Let's Create Something Amazing</h2>
+            <h2 className="section-title contact-title">
+              Let's Create Something Amazing
+            </h2>
             <div className="section-divider contact-divider"></div>
             <p className="section-description contact-description">
-              I'm currently seeking internships or freelance opportunities to gain real-world experience and contribute
-              to impactful projects in AI and app development. Let's connect and build the future together!
+              I'm currently seeking internships or freelance opportunities to
+              gain real-world experience and contribute to impactful projects in
+              AI and app development. Let's connect and build the future
+              together!
             </p>
           </motion.div>
 
@@ -1512,16 +1635,28 @@ export default function Portfolio() {
                   <div className="form-row">
                     <div className="form-group">
                       <label className="form-label">Name</label>
-                      <input type="text" className="form-input" placeholder="Your Name" />
+                      <input
+                        type="text"
+                        className="form-input"
+                        placeholder="Your Name"
+                      />
                     </div>
                     <div className="form-group">
                       <label className="form-label">Email</label>
-                      <input type="email" className="form-input" placeholder="your@email.com" />
+                      <input
+                        type="email"
+                        className="form-input"
+                        placeholder="your@email.com"
+                      />
                     </div>
                   </div>
                   <div className="form-group">
                     <label className="form-label">Subject</label>
-                    <input type="text" className="form-input" placeholder="Project Collaboration" />
+                    <input
+                      type="text"
+                      className="form-input"
+                      placeholder="Project Collaboration"
+                    />
                   </div>
                   <div className="form-group">
                     <label className="form-label">Message</label>
@@ -1550,8 +1685,9 @@ export default function Portfolio() {
             <div className="cta-content">
               <h3 className="cta-title">Ready to Start Something Great?</h3>
               <p className="cta-description">
-                Whether it's a groundbreaking AI project, a mobile app that changes lives, or a web platform that
-                connects people - I'm excited to bring your vision to reality.
+                Whether it's a groundbreaking AI project, a mobile app that
+                changes lives, or a web platform that connects people - I'm
+                excited to bring your vision to reality.
               </p>
               <div className="cta-buttons">
                 <button className="btn btn-lg cta-btn-hire">
@@ -1575,40 +1711,51 @@ export default function Portfolio() {
             <div className="footer-section">
               <h3 className="footer-brand">Ayan Banglawala</h3>
               <p className="footer-description">
-                Aspiring Agentic AI Engineer passionate about creating intelligent solutions that make a difference.
+                Aspiring Agentic AI Engineer passionate about creating
+                intelligent solutions that make a difference.
               </p>
             </div>
             <div className="footer-section">
               <h4 className="footer-section-title">Quick Links</h4>
               <div className="footer-links">
-                {["About", "Projects", "Skills", "Experience", "Contact"].map((link) => (
-                  <button key={link} onClick={() => scrollToSection(link.toLowerCase())} className="footer-link">
-                    {link}
-                  </button>
-                ))}
+                {["About", "Projects", "Skills", "Experience", "Contact"].map(
+                  (link) => (
+                    <button
+                      key={link}
+                      onClick={() => scrollToSection(link.toLowerCase())}
+                      className="footer-link"
+                    >
+                      {link}
+                    </button>
+                  )
+                )}
               </div>
             </div>
             <div className="footer-section">
               <h4 className="footer-section-title">Technologies</h4>
               <div className="footer-tech">
-                {["React", "AI/ML", "Python", "JavaScript", "React Native"].map((tech) => (
-                  <span key={tech} className="badge badge-secondary">
-                    {tech}
-                  </span>
-                ))}
+                {["React", "AI/ML", "Python", "JavaScript", "React Native"].map(
+                  (tech) => (
+                    <span key={tech} className="badge badge-secondary">
+                      {tech}
+                    </span>
+                  )
+                )}
               </div>
             </div>
           </div>
           <div className="footer-bottom">
             <p className="footer-copyright">
-              &copy; 2025 Ayan Banglawala. All rights reserved. Built with ❤️ using React, Vite & CSS
+              &copy; 2025 Ayan Banglawala. All rights reserved. Built with ❤️
+              using React, Vite & CSS
             </p>
             <p className="footer-quote">
-              "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
+              "The future belongs to those who believe in the beauty of their
+              dreams." - Eleanor Roosevelt
             </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
