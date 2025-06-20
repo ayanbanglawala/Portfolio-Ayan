@@ -41,6 +41,10 @@ import {
   Server,
   Palette,
   Quote,
+  GitBranch,
+  MessageCircle,
+  ClipboardList,
+  Home,
 } from "lucide-react";
 
 export default function Portfolio() {
@@ -126,99 +130,119 @@ export default function Portfolio() {
     { name: "React Native", level: 80, color: "progress-cyan" },
     { name: "Python", level: 75, color: "progress-green" },
     { name: "Node.js", level: 70, color: "progress-emerald" },
-    { name: "AI/ML", level: 65, color: "progress-purple" },
+    { name: "MongoDB", level: 75, color: "progress-emerald" },
+    { name: "Tailwind CSS", level: 85, color: "progress-cyan" },
+    // { name: "AI/ML", level: 65, color: "progress-purple" },
     { name: "C++", level: 80, color: "progress-red" },
-    { name: "Firebase", level: 75, color: "progress-orange" },
+    // { name: "Firebase", level: 75, color: "progress-orange" },
   ];
 
   const projects = [
-    {
-      title: "Angre-G-Grammar",
-      description:
-        "A comprehensive educational mobile application designed to teach English grammar to Gujarati speakers. Features interactive lessons, audio pronunciation guides, real-time grammar checking, and progress tracking.",
-      longDescription:
-        "This React Native application addresses the language barrier faced by Gujarati speakers learning English. It includes over 200 grammar lessons, voice recognition for pronunciation practice, gamified learning modules, and offline capability for uninterrupted learning.",
-      tech: ["React Native", "Expo", "Firebase", "Audio API", "AsyncStorage"],
-      features: [
-        "Interactive Lessons",
-        "Audio Support",
-        "Progress Tracking",
-        "Offline Mode",
-        "Gamification",
-      ],
-      status: "Completed",
-      color: "timeline-card-purple",
-      icon: Smartphone,
-    },
-    {
-      title: "Agentic AI Assistant",
-      description:
-        "An intelligent AI assistant prototype that leverages OpenAI's GPT models and LangChain for task automation, information retrieval, and natural language interactions.",
-      longDescription:
-        "This project demonstrates advanced AI integration with features like context-aware conversations, task scheduling, email automation, web scraping, and multi-modal interactions including voice and text processing.",
-      tech: [
-        "Python",
-        "OpenAI API",
-        "LangChain",
-        "FastAPI",
-        "WebSocket",
-        "Speech Recognition",
-      ],
-      features: [
-        "Voice Interaction",
-        "Task Automation",
-        "Context Awareness",
-        "Multi-modal Input",
-        "Real-time Processing",
-      ],
-      status: "In Development",
-      color: "timeline-card-purple",
-      icon: Brain,
-    },
-    {
-      title: "DSA Mastery Platform",
-      description:
-        "A comprehensive platform for learning and practicing Data Structures and Algorithms with interactive visualizations, code execution, and progress tracking.",
-      longDescription:
-        "Built with modern web technologies, this platform offers 500+ coding problems, algorithm visualizations, performance analytics, and peer comparison features. Includes support for multiple programming languages.",
-      tech: ["React.js", "Node.js", "MongoDB", "Express", "Socket.io", "D3.js"],
-      features: [
-        "Algorithm Visualization",
-        "Code Execution",
-        "Progress Analytics",
-        "Peer Comparison",
-        "Multi-language Support",
-      ],
-      status: "Completed",
-      color: "timeline-card-blue",
-      icon: Code,
-    },
-    {
-      title: "Smart Portfolio Generator",
-      description:
-        "An AI-powered tool that automatically generates personalized portfolio websites based on user input, with customizable themes and responsive design.",
-      longDescription:
-        "This innovative tool uses machine learning to analyze user skills and experience, then generates a fully functional portfolio website with optimized SEO, responsive design, and integration with popular platforms.",
-      tech: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "OpenAI API",
-        "Vercel",
-        "Prisma",
-      ],
-      features: [
-        "AI Content Generation",
-        "Theme Customization",
-        "SEO Optimization",
-        "Analytics Integration",
-        "One-click Deployment",
-      ],
-      status: "Planning",
-      color: "timeline-card-emerald",
-      icon: Palette,
-    },
-  ];
+  {
+    title: "Angreji-Grammar",
+    description:
+      "An educational mobile app teaching English grammar to Gujarati speakers with interactive lessons and audio support.",
+    longDescription:
+      "Built using React Native and Laravel for web and backend, this app helps Gujarati-speaking users learn English grammar through audio-visual lessons, quizzes, offline support, and gamified progress tracking.",
+    tech: ["React Native", "Expo", "Audio API", "AsyncStorage"],
+    features: [
+      "Interactive Lessons",
+      "Audio Support",
+      "Progress Tracking",
+      "Offline Mode",
+      "Gamification",
+    ],
+    status: "In Development",
+    color: "timeline-card-purple",
+    icon: Smartphone,
+  },
+  {
+    title: "Bus Tracking System",
+    description:
+      "A real-time bus tracking system providing live location updates and route status.",
+    longDescription:
+      "This system integrates GPS data and a live map UI to enable passengers and admins to track buses in real-time. Built with React Native, Node.js, and React for Admin Panel.",
+    tech: ["React Native", "ReactJs", "Google Maps API", "Node.js"],
+    features: [
+      "Live Bus Location",
+      "Route Updates",
+      "Admin Dashboard",
+      "Real-time Alerts",
+    ],
+    status: "In Development",
+    color: "timeline-card-blue",
+    icon: MapPin,
+  },
+  {
+    title: "Real Estate App",
+    description:
+      "A MERN stack real estate platform with listings, filtering, maps, and user authentication.",
+    longDescription:
+      "A full-stack web application where users can browse, list, and filter properties. It includes responsive UI, map view, and secure authentication, optimized for both desktop and mobile.",
+    tech: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "Flutter"],
+    features: [
+      "Property Listings",
+      "Filtering System",
+      "User Authentication",
+      "Responsive Design",
+    ],
+    status: "Completed",
+    color: "timeline-card-emerald",
+    icon: Home,
+  },
+  {
+    title: "Nico – Inquiry Management System",
+    description:
+      "A MERN-based tool for tracking and managing inquiries with an admin dashboard.",
+    longDescription:
+      "Built for efficient inquiry handling, this system features inquiry submission, status tracking, admin roles, and user notifications, streamlining communication and lead handling.",
+    tech: ["SQL", "Java", "React.js", "React Native", "JWT"],
+    features: [
+      "Admin Dashboard",
+      "Status Tracking",
+      "Role-Based Access",
+      "Real-time Updates",
+    ],
+    status: "Completed",
+    color: "timeline-card-blue",
+    icon: ClipboardList,
+  },
+  {
+    title: "MyChat App",
+    description:
+      "A real-time MERN stack chat app for 100+ users with live message updates and conversation management.",
+    longDescription:
+      "This chat application supports real-time communication, user management, group chats, and notifications. Scalable architecture allows handling active users efficiently.",
+    tech: ["MongoDB", "Express", "React.js", "Node.js", "Socket.io"],
+    features: [
+      "Live Chat",
+      "Group Messaging",
+      "User Profiles",
+      "Real-time Notifications",
+    ],
+    status: "Completed",
+    color: "timeline-card-emerald",
+    icon: MessageCircle,
+  },
+  {
+    title: "Gmail Clone",
+    description:
+      "A MERN-based Gmail-style email app with real-time features for sending, receiving, and organizing mail.",
+    longDescription:
+      "Inspired by Gmail, this app supports email threading, live updates, mail tagging, and modern UI to boost productivity by 25%.",
+    tech: ["MongoDB", "Express", "React.js", "Node.js", "Socket.io"],
+    features: [
+      "Send/Receive Emails",
+      "Real-time Updates",
+      "Threaded Conversations",
+      "Custom Labels",
+    ],
+    status: "Completed",
+    color: "timeline-card-blue",
+    icon: Mail,
+  },
+];
+
 
   const testimonials = [
     {
@@ -371,7 +395,6 @@ export default function Portfolio() {
 
       {/* Enhanced Hero Section */}
       <section id="hero" className="section section-hero mobile-margin-top">
-        
         <div className="hero-content">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -801,6 +824,45 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </div>
+                <div
+                  className="education-card-content"
+                  style={{ marginTop: 20 }}
+                >
+                  <div className="education-item">
+                    <h3 className="education-degree">
+                      Bachelor of Computer Applications (BCA)
+                    </h3>
+                    <div className="education-university">
+                      <MapPin className="university-icon" />
+                      <span className="university-name">
+                        Gujarat University
+                      </span>
+                    </div>
+                    <div className="education-period">
+                      <Calendar className="period-icon" />
+                      <span>July 2021 – May 2024</span>
+                    </div>
+                    <div className="education-subjects">
+                      <h4 className="subjects-title">Key Subjects:</h4>
+                      <div className="subjects-list">
+                        {[
+                          "Data Structures & Algorithms",
+                          "Maths",
+                          "PHP",
+                          "Python",
+                          "Javascript",
+                          "AI",
+                          "C",
+                          "C++",
+                        ].map((subject) => (
+                          <span key={subject} className="badge badge-emerald">
+                            {subject}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
@@ -820,34 +882,28 @@ export default function Portfolio() {
                 <div className="certifications-content">
                   {[
                     {
-                      title: "Advanced Linear Algebra for ML",
-                      provider: "Coursera",
+                      title: "MERN Stack Development",
+                      provider: "30dayscoding",
                       status: "Completed",
                       badgeClass: "badge-green",
                     },
                     {
-                      title: "React Native Development",
+                      title: "AI Tools workshop",
+                      provider: "Be10x",
+                      status: "Completed",
+                      badgeClass: "badge-green",
+                    },
+                    {
+                      title: "React Development",
                       provider: "Udemy",
                       status: "Completed",
                       badgeClass: "badge-green",
                     },
                     {
-                      title: "OpenAI API Integration",
-                      provider: "Self-paced",
+                      title: "NodeJs Development",
+                      provider: "Piyush Garg",
                       status: "Completed",
                       badgeClass: "badge-green",
-                    },
-                    {
-                      title: "Deep Learning Specialization",
-                      provider: "Coursera",
-                      status: "In Progress",
-                      badgeClass: "badge-yellow",
-                    },
-                    {
-                      title: "AWS Cloud Practitioner",
-                      provider: "AWS",
-                      status: "Planned",
-                      badgeClass: "badge-gray",
                     },
                   ].map((cert, index) => (
                     <motion.div
@@ -960,9 +1016,9 @@ export default function Portfolio() {
                         "VS Code",
                         "Android Studio",
                         "Expo",
-                        "Git",
                         "GitHub",
                         "Postman",
+                        "Visual Studio",
                       ],
                       color: "timeline-card-blue",
                     },
@@ -972,24 +1028,16 @@ export default function Portfolio() {
                       tools: [
                         "Firebase",
                         "MongoDB",
-                        "PostgreSQL",
-                        "AWS",
                         "Vercel",
                         "Netlify",
+                        "Render",
                       ],
                       color: "timeline-card-emerald",
                     },
                     {
                       category: "Design & Productivity",
                       icon: Palette,
-                      tools: [
-                        "Figma",
-                        "Canva",
-                        "Notion",
-                        "Slack",
-                        "Trello",
-                        "Adobe XD",
-                      ],
+                      tools: ["Figma", "Canva"],
                       color: "timeline-card-purple",
                     },
                   ].map((category, index) => (
@@ -1033,25 +1081,28 @@ export default function Portfolio() {
                   {[
                     {
                       name: "Data Structures & Algorithms",
-                      progress: 85,
+                      progress: 65, // Currently learning via Apna College
                       icon: Code,
                     },
-                    { name: "Linear Algebra", progress: 90, icon: Brain },
                     {
-                      name: "Calculus & Statistics",
-                      progress: 80,
-                      icon: TrendingUp,
-                    },
-                    { name: "Machine Learning", progress: 75, icon: Brain },
-                    {
-                      name: "Software Architecture",
-                      progress: 70,
+                      name: "Full-Stack Web Development",
+                      progress: 90, // MERN Stack expertise in real projects
                       icon: Server,
                     },
                     {
+                      name: "React Native Development",
+                      progress: 85, // Actively working on real mobile apps
+                      icon: Smartphone,
+                    },
+                    {
                       name: "UI/UX Design Principles",
-                      progress: 65,
+                      progress: 85, // Figma, Adobe XD, and real product design experience
                       icon: Palette,
+                    },
+                    {
+                      name: "Version Control & Collaboration",
+                      progress: 95, // Git, GitHub, team workflow experience
+                      icon: GitBranch,
                     },
                   ].map((concept, index) => (
                     <motion.div
@@ -1110,7 +1161,7 @@ export default function Portfolio() {
                     },
                     {
                       skill: "Communication",
-                      level: 90,
+                      level: 80,
                       icon: MessageSquare,
                       color: "timeline-card-purple",
                     },
@@ -1587,18 +1638,21 @@ export default function Portfolio() {
                       label: "GitHub",
                       username: "@ayanbanglawala",
                       class: "github",
+                      href: "https://github.com/ayanbanglawala",
                     },
                     {
                       icon: Linkedin,
                       label: "LinkedIn",
                       username: "Ayan Banglawala",
                       class: "linkedin",
+                      href: "https://linkedin.com/in/ayan-banglawala",
                     },
                     {
                       icon: Globe,
                       label: "Portfolio",
                       username: "ayanbanglawala.in",
                       class: "portfolio",
+                      href: "http://portfolio-ayan-alrd.vercel.app/",
                     },
                   ].map((social, index) => (
                     <motion.button
@@ -1610,6 +1664,7 @@ export default function Portfolio() {
                         stiffness: 300,
                         damping: 20,
                       }}
+                      onClick={() => window.open(social.href, "_blank")}
                     >
                       <social.icon className="social-icon" />
                       <div className="social-info">
