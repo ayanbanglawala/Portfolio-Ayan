@@ -370,7 +370,8 @@ export default function Portfolio() {
       </nav>
 
       {/* Enhanced Hero Section */}
-      <section id="hero" className="section section-hero">
+      <section id="hero" className="section section-hero mobile-margin-top">
+        
         <div className="hero-content">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

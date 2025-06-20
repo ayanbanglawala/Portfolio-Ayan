@@ -213,6 +213,18 @@ body {
   }
 }
 
+/* styles.css or App.css */
+.mobile-margin-top {
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .mobile-margin-top {
+    margin-top: 0;
+  }
+}
+
+
 .section-hero {
   min-height: 100vh;
   display: flex;
