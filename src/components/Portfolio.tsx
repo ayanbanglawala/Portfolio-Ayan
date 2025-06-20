@@ -138,171 +138,170 @@ export default function Portfolio() {
   ];
 
   const projects = [
-  {
-    title: "Angreji-Grammar",
-    description:
-      "An educational mobile app teaching English grammar to Gujarati speakers with interactive lessons and audio support.",
-    longDescription:
-      "Built using React Native and Laravel for web and backend, this app helps Gujarati-speaking users learn English grammar through audio-visual lessons, quizzes, offline support, and gamified progress tracking.",
-    tech: ["React Native", "Expo", "Audio API", "AsyncStorage"],
-    features: [
-      "Interactive Lessons",
-      "Audio Support",
-      "Progress Tracking",
-      "Offline Mode",
-      "Gamification",
-    ],
-    status: "In Development",
-    color: "timeline-card-purple",
-    icon: Smartphone,
-  },
-  {
-    title: "Bus Tracking System",
-    description:
-      "A real-time bus tracking system providing live location updates and route status.",
-    longDescription:
-      "This system integrates GPS data and a live map UI to enable passengers and admins to track buses in real-time. Built with React Native, Node.js, and React for Admin Panel.",
-    tech: ["React Native", "ReactJs", "Google Maps API", "Node.js"],
-    features: [
-      "Live Bus Location",
-      "Route Updates",
-      "Admin Dashboard",
-      "Real-time Alerts",
-    ],
-    status: "In Development",
-    color: "timeline-card-blue",
-    icon: MapPin,
-  },
-  {
-    title: "Real Estate App",
-    description:
-      "A MERN stack real estate platform with listings, filtering, maps, and user authentication.",
-    longDescription:
-      "A full-stack web application where users can browse, list, and filter properties. It includes responsive UI, map view, and secure authentication, optimized for both desktop and mobile.",
-    tech: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "Flutter"],
-    features: [
-      "Property Listings",
-      "Filtering System",
-      "User Authentication",
-      "Responsive Design",
-    ],
-    status: "Completed",
-    color: "timeline-card-emerald",
-    icon: Home,
-  },
-  {
-    title: "Nico – Inquiry Management System",
-    description:
-      "A MERN-based tool for tracking and managing inquiries with an admin dashboard.",
-    longDescription:
-      "Built for efficient inquiry handling, this system features inquiry submission, status tracking, admin roles, and user notifications, streamlining communication and lead handling.",
-    tech: ["SQL", "Java", "React.js", "React Native", "JWT"],
-    features: [
-      "Admin Dashboard",
-      "Status Tracking",
-      "Role-Based Access",
-      "Real-time Updates",
-    ],
-    status: "Completed",
-    color: "timeline-card-blue",
-    icon: ClipboardList,
-  },
-  {
-    title: "MyChat App",
-    description:
-      "A real-time MERN stack chat app for 100+ users with live message updates and conversation management.",
-    longDescription:
-      "This chat application supports real-time communication, user management, group chats, and notifications. Scalable architecture allows handling active users efficiently.",
-    tech: ["MongoDB", "Express", "React.js", "Node.js", "Socket.io"],
-    features: [
-      "Live Chat",
-      "Group Messaging",
-      "User Profiles",
-      "Real-time Notifications",
-    ],
-    status: "Completed",
-    color: "timeline-card-emerald",
-    icon: MessageCircle,
-  },
-  {
-    title: "Gmail Clone",
-    description:
-      "A MERN-based Gmail-style email app with real-time features for sending, receiving, and organizing mail.",
-    longDescription:
-      "Inspired by Gmail, this app supports email threading, live updates, mail tagging, and modern UI to boost productivity by 25%.",
-    tech: ["MongoDB", "Express", "React.js", "Node.js", "Socket.io"],
-    features: [
-      "Send/Receive Emails",
-      "Real-time Updates",
-      "Threaded Conversations",
-      "Custom Labels",
-    ],
-    status: "Completed",
-    color: "timeline-card-blue",
-    icon: Mail,
-  },
-];
-
+    {
+      title: "Angreji-Grammar",
+      description:
+        "An educational mobile app teaching English grammar to Gujarati speakers with interactive lessons and audio support.",
+      longDescription:
+        "Built using React Native and Laravel for web and backend, this app helps Gujarati-speaking users learn English grammar through audio-visual lessons, quizzes, offline support, and gamified progress tracking.",
+      tech: ["React Native", "Expo", "Audio API", "AsyncStorage"],
+      features: [
+        "Interactive Lessons",
+        "Audio Support",
+        "Progress Tracking",
+        "Offline Mode",
+        "Gamification",
+      ],
+      status: "In Development",
+      color: "timeline-card-purple",
+      icon: Smartphone,
+    },
+    {
+      title: "Bus Tracking System",
+      description:
+        "A real-time bus tracking system providing live location updates and route status.",
+      longDescription:
+        "This system integrates GPS data and a live map UI to enable passengers and admins to track buses in real-time. Built with React Native, Node.js, and React for Admin Panel.",
+      tech: ["React Native", "ReactJs", "Google Maps API", "Node.js"],
+      features: [
+        "Live Bus Location",
+        "Route Updates",
+        "Admin Dashboard",
+        "Real-time Alerts",
+      ],
+      status: "In Development",
+      color: "timeline-card-blue",
+      icon: MapPin,
+    },
+    {
+      title: "Real Estate App",
+      description:
+        "A MERN stack real estate platform with listings, filtering, maps, and user authentication.",
+      longDescription:
+        "A full-stack web application where users can browse, list, and filter properties. It includes responsive UI, map view, and secure authentication, optimized for both desktop and mobile.",
+      tech: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "Flutter"],
+      features: [
+        "Property Listings",
+        "Filtering System",
+        "User Authentication",
+        "Responsive Design",
+      ],
+      status: "Completed",
+      color: "timeline-card-emerald",
+      icon: Home,
+    },
+    {
+      title: "Nico – Inquiry Management System",
+      description:
+        "A MERN-based tool for tracking and managing inquiries with an admin dashboard.",
+      longDescription:
+        "Built for efficient inquiry handling, this system features inquiry submission, status tracking, admin roles, and user notifications, streamlining communication and lead handling.",
+      tech: ["SQL", "Java", "React.js", "React Native", "JWT"],
+      features: [
+        "Admin Dashboard",
+        "Status Tracking",
+        "Role-Based Access",
+        "Real-time Updates",
+      ],
+      status: "Completed",
+      color: "timeline-card-blue",
+      icon: ClipboardList,
+    },
+    {
+      title: "MyChat App",
+      description:
+        "A real-time MERN stack chat app for 100+ users with live message updates and conversation management.",
+      longDescription:
+        "This chat application supports real-time communication, user management, group chats, and notifications. Scalable architecture allows handling active users efficiently.",
+      tech: ["MongoDB", "Express", "React.js", "Node.js", "Socket.io"],
+      features: [
+        "Live Chat",
+        "Group Messaging",
+        "User Profiles",
+        "Real-time Notifications",
+      ],
+      status: "Completed",
+      color: "timeline-card-emerald",
+      icon: MessageCircle,
+    },
+    {
+      title: "Gmail Clone",
+      description:
+        "A MERN-based Gmail-style email app with real-time features for sending, receiving, and organizing mail.",
+      longDescription:
+        "Inspired by Gmail, this app supports email threading, live updates, mail tagging, and modern UI to boost productivity by 25%.",
+      tech: ["MongoDB", "Express", "React.js", "Node.js", "Socket.io"],
+      features: [
+        "Send/Receive Emails",
+        "Real-time Updates",
+        "Threaded Conversations",
+        "Custom Labels",
+      ],
+      status: "Completed",
+      color: "timeline-card-blue",
+      icon: Mail,
+    },
+  ];
 
   const testimonials = [
     {
-      name: "Dr. Rajesh Patel",
-      role: "Professor, Computer Science",
-      company: "Parul University",
+      name: "Vasik Shaikh",
+      role: "Laravel Developer",
+      company: "SNM TechCraft Innovation",
       content:
-        "Ayan demonstrates exceptional problem-solving skills and a deep understanding of modern technologies. His work on AI applications is particularly impressive.",
+        "Ayan's UI designs stand out across the company. As I often say — no one in our team designs interfaces like he does. His creativity and precision are unmatched.",
       rating: 5,
-      avatar: "RP",
+      avatar: "VK",
     },
     {
-      name: "Priya Sharma",
-      role: "Senior Developer",
-      company: "Tech Solutions Inc.",
+      name: "Safwan Mendajiwala",
+      role: "Founder",
+      company: "SNM TechCraft Innovation",
       content:
-        "Working with Ayan on the grammar learning app was fantastic. His attention to detail and user-centric approach made the project a huge success.",
+        "Our clients are consistently impressed with Ayan’s UI design. As his lead, I can confidently say his frontend work in both React and React Native has raised the bar in our projects.",
       rating: 5,
-      avatar: "PS",
+      avatar: "SM",
     },
     {
-      name: "Amit Kumar",
-      role: "Project Manager",
-      company: "Innovation Labs",
+      name: "Ashish Patel",
+      role: "Founder",
+      company: "Angreji Grammar",
       content:
-        "Ayan's ability to learn new technologies quickly and implement them effectively is remarkable. He's definitely someone to watch in the AI space.",
+        "Wow! The design of the Angreji Grammar app is absolutely wonderful. It's clean, easy to use, and exactly what our audience needed. Hats off to Ayan for this brilliant UI.",
       rating: 5,
-      avatar: "AK",
+      avatar: "AP",
     },
   ];
 
-  const blogPosts = [
-    {
-      title: "Building Intelligent Mobile Apps with React Native and AI",
-      excerpt:
-        "Exploring the integration of AI capabilities into mobile applications using React Native, OpenAI API, and modern development practices.",
-      date: "2024-12-15",
-      readTime: "8 min read",
-      tags: ["React Native", "AI", "Mobile Development"],
-      color: "timeline-card-blue",
-    },
-    {
-      title: "The Future of Agentic AI: Beyond Chatbots",
-      excerpt:
-        "Diving deep into the world of agentic AI systems and how they're revolutionizing automation and decision-making processes.",
-      date: "2024-12-10",
-      readTime: "12 min read",
-      tags: ["AI", "Machine Learning", "Automation"],
-      color: "timeline-card-purple",
-    },
-    {
-      title: "Mastering Data Structures: A Visual Approach",
-      excerpt:
-        "Understanding complex data structures through interactive visualizations and practical implementations in C++ and Python.",
-      date: "2024-12-05",
-      readTime: "15 min read",
-      tags: ["DSA", "Programming", "Education"],
-      color: "timeline-card-emerald",
-    },
-  ];
+  // const blogPosts = [
+  //   {
+  //     title: "Building Intelligent Mobile Apps with React Native and AI",
+  //     excerpt:
+  //       "Exploring the integration of AI capabilities into mobile applications using React Native, OpenAI API, and modern development practices.",
+  //     date: "2024-12-15",
+  //     readTime: "8 min read",
+  //     tags: ["React Native", "AI", "Mobile Development"],
+  //     color: "timeline-card-blue",
+  //   },
+  //   {
+  //     title: "The Future of Agentic AI: Beyond Chatbots",
+  //     excerpt:
+  //       "Diving deep into the world of agentic AI systems and how they're revolutionizing automation and decision-making processes.",
+  //     date: "2024-12-10",
+  //     readTime: "12 min read",
+  //     tags: ["AI", "Machine Learning", "Automation"],
+  //     color: "timeline-card-purple",
+  //   },
+  //   {
+  //     title: "Mastering Data Structures: A Visual Approach",
+  //     excerpt:
+  //       "Understanding complex data structures through interactive visualizations and practical implementations in C++ and Python.",
+  //     date: "2024-12-05",
+  //     readTime: "15 min read",
+  //     tags: ["DSA", "Programming", "Education"],
+  //     color: "timeline-card-emerald",
+  //   },
+  // ];
 
   const experience = [
     {
@@ -1333,51 +1332,51 @@ export default function Portfolio() {
           <div className="achievements-grid">
             {[
               {
-                icon: Trophy,
-                title: "Advanced Mathematics Mastery",
-                description:
-                  "Successfully completed advanced modules in Linear Algebra and Calculus for Machine Learning applications",
-                metric: "95% Score",
-                color: "timeline-card-purple",
-              },
-              {
                 icon: Smartphone,
-                title: "Mobile App Success",
+                title: "Mobile App Development",
                 description:
-                  "Built and deployed a fully functional React Native grammar-learning app with positive user feedback",
-                metric: "4.8★ Rating",
+                  "Built and deployed multiple production-ready mobile apps using React Native, including Angreji Grammar and a Job Portal for SNM TechCraft Innovation.",
+                metric: "6+ Apps",
                 color: "timeline-card-blue",
               },
               {
                 icon: Code,
-                title: "Problem Solving Excellence",
+                title: "DSA & Problem Solving Journey",
                 description:
-                  "Solved 100+ Data Structures and Algorithms problems across multiple platforms",
-                metric: "100+ Problems",
+                  "Actively solving Data Structures & Algorithms problems with growing consistency through Apna College’s roadmap and coding platforms.",
+                metric: "60+ Problems",
                 color: "timeline-card-emerald",
               },
               {
-                icon: Brain,
-                title: "AI Research Contribution",
+                icon: Server,
+                title: "Full-Stack Development Excellence",
                 description:
-                  "Contributed to AI research projects and developed innovative prototypes using cutting-edge technologies",
-                metric: "3 Prototypes",
-                color: "timeline-card-purple",
-              },
-              {
-                icon: Award,
-                title: "Academic Excellence",
-                description:
-                  "Maintaining high academic performance while pursuing MCA with focus on emerging technologies",
-                metric: "Top 10%",
+                  "Delivered several MERN stack-based platforms like Real Estate, Inquiry Management, Gmail Clone, and MyChat App with live updates and admin panels.",
+                metric: "7+ Projects",
                 color: "timeline-card-blue",
               },
               {
-                icon: Rocket,
-                title: "Innovation Recognition",
+                icon: Award,
+                title: "Academic Consistency",
                 description:
-                  "Recognized for innovative approach to solving real-world problems through technology",
-                metric: "2 Awards",
+                  "Maintaining strong academic performance in Online MCA with focus on AI, ML, and modern software practices.",
+                metric: "Top Performer",
+                color: "timeline-card-emerald",
+              },
+              {
+                icon: Trophy,
+                title: "Math for ML Mastery",
+                description:
+                  "Completed foundational and advanced topics in Linear Algebra and Calculus tailored for AI/ML applications through self-study.",
+                metric: "90%+ Proficiency",
+                color: "timeline-card-purple",
+              },
+              {
+                icon: Rocket,
+                title: "Top Performer at SNM TechCraft",
+                description:
+                  "Recognized by SNM TechCraft Innovation for outstanding performance, delivering high-impact mobile and web applications within tight timelines.",
+                metric: "Best Performer",
                 color: "timeline-card-purple",
               },
             ].map((achievement, index) => (
@@ -1486,7 +1485,7 @@ export default function Portfolio() {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="section section-bg-cyan">
+      {/* <section id="blog" className="section section-bg-cyan">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1545,7 +1544,7 @@ export default function Portfolio() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Enhanced Contact Section */}
       <section id="contact" className="section section-bg-dark">
@@ -1562,10 +1561,12 @@ export default function Portfolio() {
             </h2>
             <div className="section-divider contact-divider"></div>
             <p className="section-description contact-description">
-              I'm currently seeking internships or freelance opportunities to
-              gain real-world experience and contribute to impactful projects in
-              AI and app development. Let's connect and build the future
-              together!
+              I am currently seeking full-time opportunities as a MERN Stack
+              Developer where I can apply my skills in building scalable web and
+              mobile applications. With hands-on experience in React.js,
+              Node.js, MongoDB, and React Native, I’m eager to contribute to
+              innovative teams and work on impactful, real-world projects. Let’s
+              connect and create meaningful digital experiences together!
             </p>
           </motion.div>
 
@@ -1750,10 +1751,17 @@ export default function Portfolio() {
                   <Briefcase className="btn-icon" />
                   Hire Me
                 </button>
-                <button className="btn btn-outline btn-lg cta-btn-chat">
-                  <Coffee className="btn-icon" />
-                  Let's Chat
-                </button>
+
+                <a
+                  href="https://wa.me/918160879660" // Replace with your actual WhatsApp number
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-outline btn-lg cta-btn-chat">
+                    <Coffee className="btn-icon" />
+                    Let's Chat
+                  </button>
+                </a>
               </div>
             </div>
           </motion.div>
