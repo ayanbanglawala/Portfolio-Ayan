@@ -1603,8 +1603,8 @@ export default function Portfolio() {
                     {
                       icon: Globe,
                       label: "Website",
-                      value: "ayanbanglawala.dev",
-                      href: "https://ayanbanglawala.dev",
+                      value: "portfolio-ayan-alrd.vercel.app",
+                      href: "https://portfolio-ayan-alrd.vercel.app",
                     },
                   ].map((contact, index) => (
                     <motion.a
