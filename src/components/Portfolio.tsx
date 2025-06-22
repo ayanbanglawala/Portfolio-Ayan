@@ -45,6 +45,7 @@ import {
   MessageCircle,
   ClipboardList,
   Home,
+  Eye,
 } from "lucide-react";
 
 export default function Portfolio() {
@@ -347,6 +348,39 @@ export default function Portfolio() {
     },
   ];
 
+  const certifications = [
+                    {
+    title: "Deloitte Australia Technology Job Simulation on Forage - June 2025",
+    provider: "Deloitte",
+    status: "Completed",
+    badgeClass: "badge-green",
+    certificateUrl: "/deloitte-certificate.pdf" // Path to your PDF file
+  },
+                    {
+                      title: "MERN Stack Development",
+                      provider: "30dayscoding",
+                      status: "Completed",
+                      badgeClass: "badge-green",
+                    },
+                    {
+                      title: "AI Tools workshop",
+                      provider: "Be10x",
+                      status: "Completed",
+                      badgeClass: "badge-green",
+                    },
+                    {
+                      title: "React Development",
+                      provider: "Udemy",
+                      status: "Completed",
+                      badgeClass: "badge-green",
+                    },
+                    {
+                      title: "NodeJs Development",
+                      provider: "Piyush Garg",
+                      status: "Completed",
+                      badgeClass: "badge-green",
+                    },
+                  ];
   const [activeTab, setActiveTab] = useState("technical");
 
   return (
@@ -879,52 +913,85 @@ export default function Portfolio() {
                   </h3>
                 </div>
                 <div className="certifications-content">
-                  {[
-                    {
-                      title: "MERN Stack Development",
-                      provider: "30dayscoding",
-                      status: "Completed",
-                      badgeClass: "badge-green",
-                    },
-                    {
-                      title: "AI Tools workshop",
-                      provider: "Be10x",
-                      status: "Completed",
-                      badgeClass: "badge-green",
-                    },
-                    {
-                      title: "React Development",
-                      provider: "Udemy",
-                      status: "Completed",
-                      badgeClass: "badge-green",
-                    },
-                    {
-                      title: "NodeJs Development",
-                      provider: "Piyush Garg",
-                      status: "Completed",
-                      badgeClass: "badge-green",
-                    },
-                  ].map((cert, index) => (
-                    <motion.div
-                      key={index}
-                      className="certification-item"
-                      whileHover={{ scale: 1.02, x: 5 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 20,
-                      }}
-                    >
-                      <div className="certification-header">
-                        <h4 className="certification-title">{cert.title}</h4>
-                        <span className={`badge ${cert.badgeClass}`}>
-                          {cert.status}
-                        </span>
-                      </div>
-                      <p className="certification-provider">{cert.provider}</p>
-                    </motion.div>
-                  ))}
-                </div>
+  {certifications.map((cert, index) => (
+  <motion.div
+    key={index}
+    className="certification-item"
+    whileHover={{ scale: 1.02, x: 5 }}
+    transition={{
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+    }}
+    style={{
+      border: "1px solid #ddd",
+      padding: "1rem",
+      borderRadius: "8px",
+      marginBottom: "1rem",
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.5rem",
+    }}
+  >
+    <div
+      className="certification-header"
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+        alignItems: "center",
+        gap: "0.5rem",
+      }}
+    >
+      <h4 className="certification-title" style={{ margin: 0 }}>{cert.title}</h4>
+      <span className={`badge ${cert.badgeClass}`} style={{ marginLeft: "auto" }}>
+        {cert.status}
+      </span>
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        flexWrap: "wrap",
+        rowGap: "0.5rem",
+      }}
+    >
+      <p className="certification-provider" style={{ margin: 0 }}>{cert.provider}</p>
+
+      {cert.certificateUrl && (
+        <button
+          onClick={() => window.open(cert.certificateUrl, '_blank')}
+          style={{
+            padding: '8px 14px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 6,
+            backgroundColor: '#4F46E5',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '6px',
+            cursor: 'pointer',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
+            transition: 'all 0.3s ease',
+            whiteSpace: 'nowrap',
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4338CA'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4F46E5'}
+        >
+          <Eye className="btn-icon" size={18} />
+          View Certificate
+        </button>
+      )}
+    </div>
+  </motion.div>
+))}
+
+</div>
               </div>
             </motion.div>
           </div>
