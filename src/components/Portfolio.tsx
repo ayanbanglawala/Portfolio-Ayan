@@ -46,6 +46,11 @@ import {
   ClipboardList,
   Home,
   Eye,
+  ShoppingCart,
+  Sparkles,
+  PillBottle,
+  CupSoda,
+  GlassWaterIcon,
 } from "lucide-react";
 
 export default function Portfolio() {
@@ -140,7 +145,45 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "Blizzi – Soda Brand Website",
+      description:
+        "A modern, high-performance brand website for Blizzi soda, built with 3D visuals and React ecosystem.",
+      longDescription:
+        "This site features interactive soda cans using React Three Fiber and a flavor carousel powered by GSAP. With vibrant visuals and clean animations, it's designed for maximum engagement and brand appeal.",
+      tech: ["Next.js", "React Three Fiber", "Tailwind CSS", "GSAP"],
+      features: [
+        "Flavor Carousel with 3D Animated Cans",
+        "Interactive UI/UX Transitions",
+        "Next.js Routing & Image Optimization",
+        "Fully Responsive Layout",
+      ],
+      status: "Completed",
+      color: "timeline-card-emerald",
+      icon: CupSoda, // Replace with your drink or product-related icon
+      link: "https://blizzi.vercel.app/",
+    },
+    {
+      title: "GSAP 3D Landing Page",
+      description:
+        "An interactive 3D landing page built using GSAP, React Three Fiber, and smooth scroll animations.",
+      longDescription:
+        "This visually engaging landing page features dynamic 3D elements, scroll-based animations, and responsive transitions to elevate user experience. Perfect for showcasing creative or tech brands.",
+      tech: ["React.js", "GSAP", "Three.js", "React Three Fiber"],
+      features: [
+        "Smooth Scroll Animations",
+        "3D Object Animations with Three.js",
+        "GSAP Timeline Control",
+        "Responsive Design",
+      ],
+      status: "Completed",
+      color: "timeline-card-blue",
+      icon: GlassWaterIcon, // Replace with the actual icon import you're using
+      link: "https://gsap-landing-page-eta.vercel.app/",
+    },
+
+    {
       title: "Angreji-Grammar",
+      link: "https://play.google.com/store/apps/details?id=com.ayanbanglawala1.AngreGGrammer",
       description:
         "An educational mobile app teaching English grammar to Gujarati speakers with interactive lessons and audio support.",
       longDescription:
@@ -153,7 +196,7 @@ export default function Portfolio() {
         "Offline Mode",
         "Gamification",
       ],
-      status: "In Development",
+      status: "Completed",
       color: "timeline-card-purple",
       icon: Smartphone,
     },
@@ -190,6 +233,7 @@ export default function Portfolio() {
       status: "Completed",
       color: "timeline-card-emerald",
       icon: Home,
+      link: "https://nobrokeragefortenants.com",
     },
     {
       title: "Nico – Inquiry Management System",
@@ -210,6 +254,7 @@ export default function Portfolio() {
     },
     {
       title: "MyChat App",
+      link: "https://mychat-76e8.onrender.com/",
       description:
         "A real-time MERN stack chat app for 100+ users with live message updates and conversation management.",
       longDescription:
@@ -226,21 +271,22 @@ export default function Portfolio() {
       icon: MessageCircle,
     },
     {
-      title: "Gmail Clone",
+      title: "Wrist Wonders (E-Commerce)",
       description:
-        "A MERN-based Gmail-style email app with real-time features for sending, receiving, and organizing mail.",
+        "A sleek MERN-based eCommerce platform built for showcasing and selling premium watches with a user-friendly shopping experience.",
       longDescription:
-        "Inspired by Gmail, this app supports email threading, live updates, mail tagging, and modern UI to boost productivity by 25%.",
-      tech: ["MongoDB", "Express", "React.js", "Node.js", "Socket.io"],
+        "Designed for watch enthusiasts, this app includes dynamic product listings, cart management, Razorpay payment integration, and a responsive UI. It streamlines the shopping process and provides a smooth checkout experience.",
+      tech: ["MongoDB", "Express", "React.js", "Node.js", "Razorpay"],
       features: [
-        "Send/Receive Emails",
-        "Real-time Updates",
-        "Threaded Conversations",
-        "Custom Labels",
+        "Product Listing & Filtering",
+        "Add to Cart & Wishlist",
+        "Secure Checkout with Razorpay",
+        "Admin Product Management",
       ],
       status: "Completed",
       color: "timeline-card-blue",
-      icon: Mail,
+      icon: ShoppingCart, // Replace with your relevant icon import
+      link: "https://wristwonders-ewmk.onrender.com/",
     },
   ];
 
@@ -306,16 +352,17 @@ export default function Portfolio() {
 
   const experience = [
     {
-      title: "MERN Stack & React Native Developer",
+      title: "Frontend Developer",
       company: "SNM Techcraft Innovation",
       period: "Jan 2025 – Present",
       description:
-        "Developing full-stack web and cross-platform mobile applications using the MERN stack and React Native. Collaborating on live client projects and delivering scalable digital solutions.",
+        "Crafting responsive web and cross-platform mobile interfaces using React.js, Next.js, and React Native. Collaborating on live client projects to deliver sleek, scalable, and user-focused frontend solutions.",
       achievements: [
-        "Delivered 4+ full-stack web apps and 3 mobile apps",
-        "Integrated advanced APIs and third-party services",
-        "Improved app performance and user experience",
-      ],
+  "Built 4+ responsive web apps and 3 React Native apps",
+  "Implemented pixel-perfect UI with modern frontend tools",
+  "Enhanced app performance and optimized user experience",
+],
+
       color: "timeline-card-blue",
     },
     {
@@ -349,38 +396,39 @@ export default function Portfolio() {
   ];
 
   const certifications = [
-                    {
-    title: "Deloitte Australia Technology Job Simulation on Forage - June 2025",
-    provider: "Deloitte",
-    status: "Completed",
-    badgeClass: "badge-green",
-    certificateUrl: "/deloitte-certificate.pdf" // Path to your PDF file
-  },
-                    {
-                      title: "MERN Stack Development",
-                      provider: "30dayscoding",
-                      status: "Completed",
-                      badgeClass: "badge-green",
-                    },
-                    {
-                      title: "AI Tools workshop",
-                      provider: "Be10x",
-                      status: "Completed",
-                      badgeClass: "badge-green",
-                    },
-                    {
-                      title: "React Development",
-                      provider: "Udemy",
-                      status: "Completed",
-                      badgeClass: "badge-green",
-                    },
-                    {
-                      title: "NodeJs Development",
-                      provider: "Piyush Garg",
-                      status: "Completed",
-                      badgeClass: "badge-green",
-                    },
-                  ];
+    {
+      title:
+        "Deloitte Australia Technology Job Simulation on Forage - June 2025",
+      provider: "Deloitte",
+      status: "Completed",
+      badgeClass: "badge-green",
+      certificateUrl: "/deloitte-certificate.pdf", // Path to your PDF file
+    },
+    {
+      title: "MERN Stack Development",
+      provider: "30dayscoding",
+      status: "Completed",
+      badgeClass: "badge-green",
+    },
+    {
+      title: "AI Tools workshop",
+      provider: "Be10x",
+      status: "Completed",
+      badgeClass: "badge-green",
+    },
+    {
+      title: "React Development",
+      provider: "Udemy",
+      status: "Completed",
+      badgeClass: "badge-green",
+    },
+    {
+      title: "NodeJs Development",
+      provider: "Piyush Garg",
+      status: "Completed",
+      badgeClass: "badge-green",
+    },
+  ];
   const [activeTab, setActiveTab] = useState("technical");
 
   return (
@@ -452,18 +500,20 @@ export default function Portfolio() {
             </motion.h1>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-            >
-              <h2 className="hero-subtitle">
-                Passionate{" "}
-                <span style={{ color: "#7c3aed", fontWeight: "600" }}>
-                  Full-Stack & Mobile Developer
-                </span>
-              </h2>
-              <h3 className="hero-role">MERN Stack & React Native Developer</h3>
-            </motion.div>
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+>
+  <h2 className="hero-subtitle">
+    Passionate{" "}
+    <span style={{ color: "#7c3aed", fontWeight: "600" }}>
+      Frontend Developer
+    </span>{" "}
+    with Full-Stack Capabilities
+  </h2>
+  <h3 className="hero-role">React.js • Next.js • React Native • MERN Stack</h3>
+</motion.div>
+
 
             <motion.p
               className="hero-description"
@@ -471,9 +521,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
             >
-              I specialize in building modern web and mobile applications using
-              MERN stack and React Native. Exploring AI and machine learning to
-              expand my skill set and build intelligent solutions in the future.
+              I specialize in crafting modern, responsive web and mobile applications using React.js, Next.js, and React Native, backed by the MERN stack. Currently exploring AI and machine learning to build smarter, future-ready digital experiences.
             </motion.p>
 
             <motion.div
@@ -512,9 +560,10 @@ export default function Portfolio() {
               transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
             >
               {[
-                { number: "15+", label: "Projects Completed" },
-                { number: "100+", label: "DSA Problems Solved" },
+                { number: "7+", label: "Projects Completed" },
+                // { number: "100+", label: "DSA Problems Solved" },
                 { number: "3+", label: "Years Learning" },
+                { number: "2+", label: "Years Experience" },
                 { number: "8+", label: "Technologies Mastered" },
               ].map((stat, index) => (
                 <div key={index} className="hero-stat">
@@ -575,18 +624,13 @@ export default function Portfolio() {
                 </div>
                 <div className="about-content">
                   <p className="about-text">
-                    I am a passionate MERN Stack and React Native Developer
-                    currently pursuing an Online MCA from Parul University. I
-                    love building modern web and mobile applications that are
-                    both functional and user-friendly.
+I’m a frontend-focused MERN Stack and React Native Developer currently pursuing an Online MCA from Parul University. I specialize in building fast, responsive, and user-friendly web and mobile interfaces using React.js, Next.js, and React Native.
                   </p>
                   <p className="about-text">
-                    I believe in continuous learning and regularly explore areas
-                    like AI, machine learning, and full-stack architecture to
-                    deepen my expertise. My long-term goal is to contribute to
-                    intelligent, impactful solutions at the intersection of
-                    technology and real-world needs.
+While my core strength is frontend, I also handle backend tasks with Node.js and MongoDB. I'm exploring AI and machine learning to create smarter, future-ready applications.
+                  
                   </p>
+                 
                 </div>
               </div>
 
@@ -913,85 +957,105 @@ export default function Portfolio() {
                   </h3>
                 </div>
                 <div className="certifications-content">
-  {certifications.map((cert, index) => (
-  <motion.div
-    key={index}
-    className="certification-item"
-    whileHover={{ scale: 1.02, x: 5 }}
-    transition={{
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
-    }}
-    style={{
-      border: "1px solid #ddd",
-      padding: "1rem",
-      borderRadius: "8px",
-      marginBottom: "1rem",
-      display: "flex",
-      flexDirection: "column",
-      gap: "0.5rem",
-    }}
-  >
-    <div
-      className="certification-header"
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        flexWrap: "wrap",
-        alignItems: "center",
-        gap: "0.5rem",
-      }}
-    >
-      <h4 className="certification-title" style={{ margin: 0 }}>{cert.title}</h4>
-      <span className={`badge ${cert.badgeClass}`} style={{ marginLeft: "auto" }}>
-        {cert.status}
-      </span>
-    </div>
+                  {certifications.map((cert, index) => (
+                    <motion.div
+                      key={index}
+                      className="certification-item"
+                      whileHover={{ scale: 1.02, x: 5 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                      }}
+                      style={{
+                        border: "1px solid #ddd",
+                        padding: "1rem",
+                        borderRadius: "8px",
+                        marginBottom: "1rem",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "0.5rem",
+                      }}
+                    >
+                      <div
+                        className="certification-header"
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          flexWrap: "wrap",
+                          alignItems: "center",
+                          gap: "0.5rem",
+                        }}
+                      >
+                        <h4
+                          className="certification-title"
+                          style={{ margin: 0 }}
+                        >
+                          {cert.title}
+                        </h4>
+                        <span
+                          className={`badge ${cert.badgeClass}`}
+                          style={{ marginLeft: "auto" }}
+                        >
+                          {cert.status}
+                        </span>
+                      </div>
 
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        rowGap: "0.5rem",
-      }}
-    >
-      <p className="certification-provider" style={{ margin: 0 }}>{cert.provider}</p>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          flexWrap: "wrap",
+                          rowGap: "0.5rem",
+                        }}
+                      >
+                        <p
+                          className="certification-provider"
+                          style={{ margin: 0 }}
+                        >
+                          {cert.provider}
+                        </p>
 
-      {cert.certificateUrl && (
-        <button
-          onClick={() => window.open(cert.certificateUrl, '_blank')}
-          style={{
-            padding: '8px 14px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 6,
-            backgroundColor: '#4F46E5',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '6px',
-            cursor: 'pointer',
-            boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
-            transition: 'all 0.3s ease',
-            whiteSpace: 'nowrap',
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4338CA'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4F46E5'}
-        >
-          <Eye className="btn-icon" size={18} />
-          View Certificate
-        </button>
-      )}
-    </div>
-  </motion.div>
-))}
-
-</div>
+                        {cert.certificateUrl && (
+                          <button
+                            onClick={() =>
+                              window.open(cert.certificateUrl, "_blank")
+                            }
+                            style={{
+                              padding: "8px 14px",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              gap: 6,
+                              backgroundColor: "#4F46E5",
+                              color: "#fff",
+                              border: "none",
+                              borderRadius: "6px",
+                              cursor: "pointer",
+                              boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+                              transition: "all 0.3s ease",
+                              whiteSpace: "nowrap",
+                            }}
+                            onMouseEnter={(e) =>
+                              (e.currentTarget.style.backgroundColor =
+                                "#4338CA")
+                            }
+                            onMouseLeave={(e) =>
+                              (e.currentTarget.style.backgroundColor =
+                                "#4F46E5")
+                            }
+                          >
+                            <Eye className="btn-icon" size={18} />
+                            View Certificate
+                          </button>
+                        )}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
@@ -1103,7 +1167,7 @@ export default function Portfolio() {
                     {
                       category: "Design & Productivity",
                       icon: Palette,
-                      tools: ["Figma", "Canva"],
+                      tools: ["Figma", "Canva", "ThreeJs", "GSAP"],
                       color: "timeline-card-purple",
                     },
                   ].map((category, index) => (
@@ -1145,11 +1209,11 @@ export default function Portfolio() {
               <div className="tabs-content">
                 <div className="concepts-grid">
                   {[
-                    {
-                      name: "Data Structures & Algorithms",
-                      progress: 65, // Currently learning via Apna College
-                      icon: Code,
-                    },
+                    // {
+                    //   name: "Data Structures & Algorithms",
+                    //   progress: 65, // Currently learning via Apna College
+                    //   icon: Code,
+                    // },
                     {
                       name: "Full-Stack Web Development",
                       progress: 90, // MERN Stack expertise in real projects
@@ -1363,16 +1427,17 @@ export default function Portfolio() {
                     </div>
                   </div>
 
-                  <div className="project-buttons">
-                    <button className="btn btn-primary project-btn">
+                 {project.link && (
+                   <div className="project-buttons">
+                    <button
+                      className="btn btn-primary project-btn"
+                      onClick={() => window.open(project.link, "_blank")}
+                    >
                       <ExternalLink className="btn-icon" />
                       View Project
                     </button>
-                    <button className="btn btn-outline project-btn">
-                      <Github className="btn-icon" />
-                      Source Code
-                    </button>
                   </div>
+                 )}
                 </div>
               </motion.div>
             ))}
