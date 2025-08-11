@@ -52,6 +52,7 @@ import {
   CupSoda,
   GlassWaterIcon,
 } from "lucide-react";
+import MailSender from "./MailSender"; // Assuming you have a MailSender component
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -1811,56 +1812,7 @@ While my core strength is frontend, I also handle backend tasks with Node.js and
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="contact-right"
-            >
-              <div className="contact-card contact-form-card">
-                <h3 className="contact-card-title">Send a Message</h3>
-                <form className="contact-form">
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label className="form-label">Name</label>
-                      <input
-                        type="text"
-                        className="form-input"
-                        placeholder="Your Name"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label className="form-label">Email</label>
-                      <input
-                        type="email"
-                        className="form-input"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Subject</label>
-                    <input
-                      type="text"
-                      className="form-input"
-                      placeholder="Project Collaboration"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Message</label>
-                    <textarea
-                      className="form-input form-textarea"
-                      placeholder="Tell me about your project or opportunity..."
-                    />
-                  </div>
-                  <button className="btn btn-primary contact-submit-btn">
-                    <Send className="btn-icon" />
-                    Send Message
-                  </button>
-                </form>
-              </div>
-            </motion.div>
+            <MailSender />
           </div>
 
           {/* Call to Action */}
